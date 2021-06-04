@@ -1,0 +1,28 @@
+h1 {
+  font-weight: 500;
+}
+
+.row {
+  display: flex;
+  margin: 15px 0 15px 0;
+}
+
+.col {
+  padding:0 15px 15px 0;
+}
+
+.col-25 {
+  width: 25%;
+}
+
+.col-50 {
+  width: 50%;
+}
+
+.col-75 {
+  width: 75%;
+}
+
+.col-100 {
+  width: 100%;
+}
