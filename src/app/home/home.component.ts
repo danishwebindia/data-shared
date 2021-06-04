@@ -6,7 +6,7 @@ import {DataService} from '../data.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-title:string = 'SpaceX Launch Programs';
+title:string = 'SpaceX Launch Programs Danish';
 data:any;
 errorMessage:string=''
   constructor(private _dataService : DataService) { }
