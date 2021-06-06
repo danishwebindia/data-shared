@@ -1,1 +1,5 @@
+<div class="loader" *ngIf="isLoader"></div>
+<div *ngIf="errorMessage; else showData" class="error">{{errorMessage}}</div>
+<ng-template #showData>
 <app-card *ngFor="let item of cardsData" [card]="item"></app-card>
+</ng-template>

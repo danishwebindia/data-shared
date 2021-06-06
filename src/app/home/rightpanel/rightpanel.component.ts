@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class RightpanelComponent implements OnInit {
 
-@Input() sendAPIData:any;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -16,5 +16,7 @@ export class RightpanelComponent implements OnInit {
 
 
   }
+
+
 
 }

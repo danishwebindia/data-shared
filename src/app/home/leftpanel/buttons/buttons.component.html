@@ -1,1 +1,2 @@
-<app-button *ngFor="let button of getButtonLbl" [val]="button" [param]="param" (valueChange)="getValue($event)"></app-button>
+<app-button *ngFor="let button of getButtonLbl; let i = index" [val]="button" [idx]="i" [param]="param" (getClick)="findClick($event)"></app-button>
+

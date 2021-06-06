@@ -3,13 +3,13 @@
   <div class="sub-heading">
     Launch Year
   </div>
-  <app-buttons [getButtonLbl]="years" [param]="year" (sendValue)="getValue($event)"></app-buttons>
+  <app-buttons [getButtonLbl]="years" [param]="year" (buttonData)="getClickData($event)"></app-buttons>
   <div class="sub-heading">
     Successful Launch
   </div>
-  <app-buttons [getButtonLbl]="successLaunch" [param]="launch" (sendValue)="getValue($event)"></app-buttons>
+  <app-buttons [getButtonLbl]="successLaunch" [param]="launch" (buttonData)="getClickData($event)"></app-buttons>
   <div class="sub-heading">
     Successful Landing
   </div>
-  <app-buttons [getButtonLbl]="successLand" [param]="land" (sendValue)="getValue($event)"></app-buttons>
+  <app-buttons [getButtonLbl]="successLand" [param]="land" (buttonData)="getClickData($event)"></app-buttons>
 </div>
