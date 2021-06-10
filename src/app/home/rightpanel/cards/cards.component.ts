@@ -24,6 +24,7 @@ param:any;
   servicecall(param:any){
     this.isLoader =true;
       this.errorMessage=''
+      this.cardsData=[]
       this.dataService.getData(param).subscribe((res:any)=>{
         if(res.length!==0){
           this.cardsData = res;
