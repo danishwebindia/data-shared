@@ -19,7 +19,15 @@ describe('ButtonsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+   it('should initilize buttons component', () => {
     expect(component).toBeTruthy();
   });
+
+  it('buttons component send data to outer component', () => {
+    spyOn(component.buttonData,'emit');
+    fixture.detectChanges();
+    component.findClick({'year':'2006'})
+    expect(component.buttonData.emit).toHaveBeenCalledWith({'year':'2006'})
+  });
+
 });

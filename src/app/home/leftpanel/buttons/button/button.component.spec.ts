@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {RouterTestingModule} from '@angular/router/testing'
 import { ButtonComponent } from './button.component';
 
 describe('ButtonComponent', () => {
@@ -8,7 +8,9 @@ describe('ButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ButtonComponent ]
+      declarations: [ ButtonComponent ],
+      imports:[RouterTestingModule]
+
     })
     .compileComponents();
   });
@@ -19,7 +21,14 @@ describe('ButtonComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+   it('should initilize button component', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('button clicked data send to outer component', () => {
+    spyOn(component.getClick, 'emit');
+    fixture.detectChanges();
+    component.getlbl('2006','year',0);
+    expect(component.getClick.emit).toHaveBeenCalledWith({'year':'2006'})
   });
 });

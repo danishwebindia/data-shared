@@ -22,14 +22,15 @@ export class LeftpanelComponent implements OnInit {
   }
 
   getClickData(data:any){
-       if(data['year']){
+    if(data['year']){
       this.obj.year = data.year
-    } else if (data['land']){
+      }
+        else if (data['land']){
      this.obj.land = data.land
-    } else if (data['launch']){
+      }
+        else if (data['launch']){
       this.obj.launch = data.launch
      }
-    console.log(this.obj);
     this._router.navigate(['/filteredData'],{queryParams:this.obj})
   }
 }

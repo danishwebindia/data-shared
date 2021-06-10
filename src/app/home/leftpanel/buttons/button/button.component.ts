@@ -21,18 +21,6 @@ export class ButtonComponent implements OnInit {
 
   getlbl(data:any,val:string,idx:any){
     this.getClick.emit({[val]:data})
-
-  /*  if(val==='year'){
-     this.objYear = {[val]:data}
-   } else if (val==='land'){
-    this.objLand = {[val]:data}
-   } else {
-    this.objLaunch = {[val]:data}
-   }
-
-   console.log(Object.assign({},this.objYear,this.objLand,this.objLaunch)); */
-
-  //  this._router.navigate(['/filteredData'],{queryParams:obj})
   }
 
 
